@@ -26,4 +26,7 @@ class Post extends Model
     public function hasTag($tagId){
         return in_array($tagId,$this->pluck('id')->toArray());
     }
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

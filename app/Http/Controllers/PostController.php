@@ -54,13 +54,14 @@ class PostController extends Controller
     public function store(CreatePostRequest $request)
     {
         //dd($request->all());
-       $image= $request->image->store('posts');
+       $image= $request->image->store('/postsImage');
 $posts=Post::create([
     'title'=>$request->title,
     'description'=>$request->description,
     'content'=>$request->content,
     'published_at'=>$request->published_at,
     'category_id'=>$request->category,
+    'user_id'=>auth()->user()->id,
     'image'=>$image,
 ]);
 if($request->tags){
