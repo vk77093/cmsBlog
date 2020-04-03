@@ -60,7 +60,7 @@ $posts=Post::create([
     'description'=>$request->description,
     'content'=>$request->content,
     'published_at'=>$request->published_at,
-    'category_id'=>$request->category,
+    'category_id'=>$request->category_id,
     'user_id'=>auth()->user()->id,
     'image'=>$image,
 ]);

@@ -52,7 +52,7 @@
     </div>
 <div class="form-group">
         <label for="category">Category</label>
-      <select class="form-control tags-select" id="category" name="category">
+      <select class="form-control tags-select" id="category" name="category_id">
     @foreach ($categories as $category )
     <option value="{{$category->id}}"
         @if(isset($posts))
